@@ -1,10 +1,8 @@
 "use client";
 import React, { FormEvent, useState } from "react";
 import { confirmSignUp, signIn, signInWithRedirect } from "aws-amplify/auth";
-import { useRouter } from "next/navigation";
 import "aws-amplify/auth/enable-oauth-listener";
-import { SignInWithGoogle } from "@app/config/googleButton";
-import GoogleLogin from "react-google-login";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -97,26 +95,6 @@ const LoginForm = () => {
         }}
         className="w-full mt-4 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
       />
-
-      {/* <SignInWithGoogle /> */}
-
-      {/* <GoogleLogin
-        clientId={process.env.NEXT_PUBLIC__GOOGLE_CLIENT_ID ?? ""}
-        buttonText="Login"
-        accessType="offline"
-        uxMode="redirect"
-        responseType="token"
-        redirectUri="https://khe.auth.us-east-1.amazoncognito.com/oauth2/idpresponse"
-        scope="openid profile email"
-        className="w-full mt-4 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-        onSuccess={(result) => {
-          console.log(">>> Google result: ", result);
-        }}
-        onFailure={(error) => {
-          console.log(">>> Google error: ", error);
-        }}
-        cookiePolicy={"single_host_origin"}
-      /> */}
     </form>
   );
 };
