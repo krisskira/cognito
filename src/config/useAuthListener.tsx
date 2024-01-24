@@ -23,6 +23,7 @@ export const useAuthListener = (
             callback?.(false);
             break;
           case "signedIn":
+          case "signInWithRedirect":
             console.log(">>> signedIn");
             callback?.(true);
             break;
@@ -33,7 +34,8 @@ export const useAuthListener = (
       }
     );
     return () => observer();
-  }, [callback]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return null;
 };

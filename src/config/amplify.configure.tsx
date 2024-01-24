@@ -13,11 +13,9 @@ if (!process.env.NEXT_PUBLIC__COGNITO_USER_POOL_CLIENT_ID) {
 if (!process.env.NEXT_PUBLIC__COGNITO_DOMAIN) {
   throw new Error("Missing NEXT_PUBLIC__COGNITO_DOMAIN");
 }
-
 if (!process.env.NEXT_PUBLIC__COGNITO_LOGIN_URL) {
   throw new Error("Missing NEXT_PUBLIC__COGNITO_LOGIN_URL");
 }
-
 if (!process.env.NEXT_PUBLIC__COGNITO_LOGOUT_URL) {
   throw new Error("Missing NEXT_PUBLIC__COGNITO_LOGOUT_URL");
 }
