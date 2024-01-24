@@ -62,6 +62,7 @@ export default function RouteWithAuthentication({
               </div>
             );
           },
+          
           Footer() {
             return (
               <div className="grid gap-6">
@@ -119,7 +120,6 @@ export default function RouteWithAuthentication({
       }}
       hideSignUp={true}
       socialProviders={["google"]}
-      
       variation="modal"
     >
       {children}
